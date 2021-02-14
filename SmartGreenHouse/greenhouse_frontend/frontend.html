@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" type="text/javascript"></script>
+  <script src="js/utils.js" type="text/javascript"></script>
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+  <script src="js/status.js" type="text/javascript"></script>
+  <script src="js/notification.js" type="text/javascript"></script>
+  <script src="js/humidity.js" type="text/javascript"></script>
+  <script src="js/irrigation.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link href="css/frontend.css" rel="stylesheet" type="text/css" />
+  <link href="css/humidity.css" rel="stylesheet" type="text/css" />
+  <link href="css/status.css" rel="stylesheet" type="text/css" />
+  <link href="css/notification.css" rel="stylesheet" type="text/css" />
+  <link href="css/irrigation.css" rel="stylesheet" type="text/css" />
+  <title>Frontend Page</title>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <h1>Smart Greenhouse</h1>
+    </div>
+    <div class="logo">
+      <img src="img/greenhouse.png" alt="Serra">
+    </div>  
+  </div>
+  <div class="status">
+    <h1>Stato della serra</h1>
+    <div class="status-text">
+    </div>
+  </div>
+  <div class="history">
+    <h1>Monitora lo storico della tua serra</h1>
+    <div class="humidity">
+      <div class="humidity-img">
+        <img src="img/humidity.png" alt="humidity icon">
+      </div>
+      <div id="umidità">
+        <a href="#" class="btn btn-primary">Umidità</a>
+      </div>
+    </div>
+    <div class="irrigation">
+      <div class="irrigation-img">
+        <img src="img/irrigation.png" alt="irrigation icon">
+      </div>
+      <div id="irrigazione">
+        <a href="#" class="btn btn-success">Irrigazione</a>
+      </div>
+    </div>
+    <div class="notification">
+      <div class="notification-img">
+        <img src="img/danger.png" alt="danger icon">
+      </div>
+      <div id="segnalazioni">
+        <a href="#" class="btn btn-danger">Segnalazioni</a>
+      </div>
+    </div>
+  </div>
+	<div class="humidity-modal">
+    <div class="humidity-modal-content">
+      <span class="humidity-modal-close">&times;</span>
+  	<section>
+  	<h1>Monitora l'umidità della tua serra</h1>
+  	<nav>
+  		<a id="last-hour" href="#">Questa ora</a><br/>
+  		<a id="last-day" href="#">Oggi</a><br/>
+      <a id="last-week" href="#">Questa settimana</a><br/>
+  		<a id="last-month" href="#">Questo mese</a><br/>
+  		<a id="last-year" href="#">Questo anno</a><br/>
+      <a id="ever" href="#">Sempre</a><br/>
+  	</nav>
+  	<h2></h2>
+  	<canvas id="humidity"></canvas>
+  	</section>
+    </div>
+	</div>
+  <div class="irrigation-modal">
+    <div class="irrigation-modal-content">
+      <span class="irrigation-modal-close">&times;</span>
+  	<section>
+  	<h1>Monitora l'irrigazione della tua serra</h1>
+  	<nav>
+  		<a id="irrigation-last-hour" href="#">Questa ora</a><br/>
+  		<a id="irrigation-last-day" href="#">Oggi</a><br/>
+      <a id="irrigation-last-week" href="#">Questa settimana</a><br/>
+  		<a id="irrigation-last-month" href="#">Questo mese</a><br/>
+  		<a id="irrigation-last-year" href="#">Questo anno</a><br/>
+      <a id="irrigation-ever" href="#">Sempre</a><br/>
+  	</nav>
+  	<h2></h2>
+  	<canvas id="irrigation"></canvas>
+  	</section>
+    </div>
+	</div>
+  <div class="notification-modal">
+    <div class="notification-modal-content">
+      <span class="notification-modal-close">&times;</span>
+  	<section>
+  	<h1>Monitora le segnalazioni della tua serra</h1>
+  	<nav>
+  		<a id="notification-hour" href="#">Questa ora</a><br/>
+  		<a id="notification-day" href="#">Oggi</a><br/>
+      <a id="notification-week" href="#">Questa settimana</a><br/>
+  		<a id="notification-month" href="#">Questo mese</a><br/>
+  		<a id="notification-year" href="#">Questo anno</a><br/>
+      <a id="notification-ever" href="#">Sempre</a><br/>
+  	</nav>
+  	<h2></h2>
+  	<canvas id="notification"></canvas>
+  	</section>
+    </div>
+	</div>
+</body>

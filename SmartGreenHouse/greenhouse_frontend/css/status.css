@@ -1,0 +1,37 @@
+.status{
+	width: 70%;
+	margin: auto;
+	padding: 50px;
+	border-bottom: 3px solid #333333;
+}
+
+.status-text{
+	margin: auto;
+	width:280px;
+}
+
+.status-item p{
+	color: black;
+	font-size: 25px;
+  padding: 10px;
+	width: 250px;
+	margin: 10px;
+}
+
+.status-item{
+	margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.fa-sliders-h{
+	font-size: 35px;
+  color: green;
+  margin: 20px;
+}
+
+.fa-hand-point-up{
+	font-size: 35px;
+  color: red;
+  margin: 20px;
+}

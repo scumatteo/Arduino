@@ -1,0 +1,88 @@
+body{
+	color: black;
+}
+
+h1{
+	text-align: center;
+	font-size: 35px;
+	font-weight: lighter;
+}
+
+.header{
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.title{
+	margin-right: 20px;
+	margin-top: 30px;
+}
+
+.title h1{
+	font-weight: lighter;
+	color:#7BB900;
+	font-size: 50px;
+}
+
+img{
+	width: 100px;
+}
+
+.history{
+	margin-left: 20px;
+	padding: 20px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.humidity, .irrigation, .notification{
+	margin-left: 40%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-flow: row;
+}
+
+.humidity-img{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	border: 10px solid 	#2196F3;
+}
+
+.humidity-img img{
+	margin-left: 15px;
+	margin-top: 12px;
+}
+
+.irrigation-img{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	border: 10px solid #40A939;
+}
+
+.irrigation-img img{
+	margin-left: 12px;
+	margin-top: 12px;
+}
+
+.notification-img{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	border: 10px solid #EF2B2C;
+}
+
+.notification-img img{
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+a{
+	margin-top: 50px;
+	margin-left: 20px;
+}
